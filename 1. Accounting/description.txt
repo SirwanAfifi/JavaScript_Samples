@@ -1,0 +1,9 @@
+Project Name: Account Balance
+
+Descriptin:
+This project converts a number into an accounting number. User inputs a number
+inside a textbox and choose a format like $ for it from a select box and get the
+accounting number immediately
+
+example: $10
+
