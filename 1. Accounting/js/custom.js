@@ -2,7 +2,7 @@
     var selectedOption = getSelectedIndex(); // set a global variable to save changes later
 
     // If Input doesn't empty call change event on currency
-    if( !this.value.match(/\S/) ) {
+    if( !this.value.match(/\S/) || !document.getElementById('new-cost').innerText.match(/\S/) ) {
         document.getElementById('currency').addEventListener('change', function() {
             selectedOption = getSelectedIndex();
             document.getElementById('new-currency').innerText =  selectedOption;
