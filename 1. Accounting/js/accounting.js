@@ -23,5 +23,3 @@ document.getElementById('currency').addEventListener('change', function () {
     document.getElementById('new-cost').innerText =  selectedOption;
 
 }, false);
-
-
