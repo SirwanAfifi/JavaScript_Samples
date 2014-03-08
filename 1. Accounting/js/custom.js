@@ -1,9 +1,11 @@
 ﻿document.getElementById('number').addEventListener('input', function () {
-    var selectedOption = getSelectedIndex(); // set a global variable to save changes later
+    // two global variable for using later
+    var selectedOption = getSelectedIndex();
     var inputedText = this.value;
-    // If Input doesn't empty call change event on currency
+
     document.getElementById('currency').addEventListener('change', function() {
         selectedOption = getSelectedIndex();
+        /* Check if Input doesn't empty */
         document.getElementById('new-currency').innerText =  checkInput(inputedText, selectedOption);
     }, false);
 
