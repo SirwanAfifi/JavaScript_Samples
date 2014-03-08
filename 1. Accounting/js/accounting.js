@@ -1,37 +1,15 @@
-window.addEventListener('load', fireUp, false);
+document.getElementById('number').addEventListener('input', function () {
 
-function fireUp () {
-    if ( document.getElementById('number') ) { //If brwoser support JavaScript
-        document.getElementById('number').addEventListener('keypress', showResult, false);
-        document.getElementById('currency').addEventListener('change', showCurrency, false);
-    }
-}
-
-function showResult (evt) {
-    var insertedNumber = evt.target.value;
-    var newCost = document.createTextNode(insertedNumber);
-    var target = document.getElementById('new-cost');
-
-    if ( target.hasChildNodes() ) {
-        target.removeChild(target.firstChild);
+    var select = document.getElementById('currency');
+    var selectedOption = select.options[select.selectedIndex].text;
+    var result = document.getElementById('new-cost')
+    if (this.value != null) {
+        //result.innerText = this.value + " " + selectedOption;
+        alert('hello')
+    } else {
+        result.innerText
     }
 
-    target.appendChild(newCost);
-
-}
-
-function showCurrency (evt) {
-    var insertedCurrency = evt.target.options[evt.target.selectedIndex].text;
-    var newCurrency = document.createTextNode(insertedCurrency);
-    var target = document.getElementById('new-currency');
-
-    if ( target.hasChildNodes() ) {
-        target.removeChild(target.firstChild);
-    }
-
-    target.appendChild(newCurrency);
-
-}
-
+}, false);
 
 
