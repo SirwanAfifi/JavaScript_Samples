@@ -3,7 +3,6 @@ window.addEventListener('load', fireUp, false);
 function fireUp () {
     if ( document.getElementById('number') ) { //If brwoser support JavaScript
         document.getElementById('number').addEventListener('input', showResult, false);
-        document.getElementById('currency').addEventListener('change', showCurrency, false);
     }
 }
 
@@ -17,6 +16,11 @@ function showResult (evt) {
     }
 
     target.appendChild(newCost);
+
+    /* Set a default currency for outputed number */
+    var insertedCurrency = document.getElementById('currency');
+    document.getElementById('new-currency').innerText = insertedCurrency.options[insertedCurrency.selectedIndex].text;
+    document.getElementById('currency').addEventListener('change', showCurrency, false);
 
 }
 
