@@ -2,7 +2,7 @@ window.addEventListener('load', fireUp, false);
 
 function fireUp () {
     if ( document.getElementById('number') ) { //If brwoser support JavaScript
-        document.getElementById('number').addEventListener('keypress', showResult, false);
+        document.getElementById('number').addEventListener('input', showResult, false);
         document.getElementById('currency').addEventListener('change', showCurrency, false);
     }
 }
