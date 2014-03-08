@@ -12,8 +12,12 @@ function showResult (evt) {
     var newCost = document.createTextNode(insertedNumber);
     var target = document.getElementById('new-cost');
 
+    if ( target.hasChildNodes() ) {
+        target.removeChild(target.firstChild);
+    }
+
     target.appendChild(newCost);
-    // removeEvenetListener('keypress', showResult, false);
+
 }
 
 function showCurrency (evt) {
@@ -21,7 +25,12 @@ function showCurrency (evt) {
     var newCurrency = document.createTextNode(insertedCurrency);
     var target = document.getElementById('new-currency');
 
+    if ( target.hasChildNodes() ) {
+        target.removeChild(target.firstChild);
+    }
+
     target.appendChild(newCurrency);
+
 }
 
 
