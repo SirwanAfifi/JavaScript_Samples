@@ -1,0 +1,30 @@
+body {
+  background-color: #2BACB5;
+  text-align: center;
+  padding-top: 3em;
+  color: #F5ECD9;
+  font-family: Helvetica;
+  font-size: 2em;
+  line-height: 1em;
+}
+
+input, 
+select {
+  border: none;
+  outline: 0;
+  background: #F5ECD9;
+  height: 40px;
+  color: #3B3B3B;
+  font-size: 0.5em;
+}
+
+input[type="number"] {
+  width: 200px;
+  padding-left: 1em;
+}
+
+select {
+  width: 50px;
+  padding-left: 1em;
+}
+  
