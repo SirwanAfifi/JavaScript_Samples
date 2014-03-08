@@ -8,7 +8,7 @@ body {
   line-height: 1em;
 }
 
-input,
+input, 
 select {
   border: none;
   outline: 0;
@@ -27,3 +27,4 @@ select {
   width: 50px;
   padding-left: 1em;
 }
+  
