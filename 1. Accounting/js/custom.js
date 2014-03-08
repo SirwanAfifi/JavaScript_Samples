@@ -1,17 +1,16 @@
 ﻿document.getElementById('number').addEventListener('input', function () {
     var selectedOption = getSelectedIndex(); // set a global variable to save changes later
-
+    var inputedText = this.value;
     // If Input doesn't empty call change event on currency
-    if( !this.value.match(/\S/) || !document.getElementById('new-cost').innerText.match(/\S/) ) {
-        document.getElementById('currency').addEventListener('change', function() {
-            selectedOption = getSelectedIndex();
-            document.getElementById('new-currency').innerText =  selectedOption;
-        }, false);
-    }
+    document.getElementById('currency').addEventListener('change', function() {
+        selectedOption = getSelectedIndex();
+        document.getElementById('new-currency').innerText =  checkInput(inputedText, selectedOption);
+    }, false);
 
-    document.getElementById('new-cost').innerText = this.value;
+
+    document.getElementById('new-cost').innerText = inputedText;
     /* Check if Input doesn't empty */
-    document.getElementById('new-currency').innerText = checkInput(this.value, selectedOption);
+    document.getElementById('new-currency').innerText = checkInput(inputedText, selectedOption);
 }, false);
 
 function getSelectedIndex () {
@@ -27,13 +26,4 @@ function checkInput (inputNumber , selectedOption) {
         return selectedOption;
     }
 }
-
-
-
-
-
-
-
-
-
 
